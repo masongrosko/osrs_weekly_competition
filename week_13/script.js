@@ -1,4 +1,33 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // Fetch data from the API
+    fetch("https://api.wiseoldman.net/v2/competitions/28879")
+        .then(response => response.json())
+        .then(data => {
+            const participants = data.participations;
+
+            // Create and populate the table
+            const table = document.createElement("table");
+            table.classList.add("participants");
+
+            participants.forEach(participant => {
+                const row = table.insertRow();
+                const nameCell = row.insertCell();
+                const progressCell = row.insertCell();
+
+                nameCell.textContent = participant.player.displayName;
+                progressCell.textContent = participant.progress.gained;
+
+                // Append row to the table
+                table.appendChild(row);
+            });
+
+            // Append table to the participantsTable div
+            participantsTable.appendChild(table);
+        })
+        .catch(error => {
+            console.error("Error fetching data:", error);
+        });
+
     const xpInput = document.getElementById("xpInput");
     const wonCompetitionCheckbox = document.getElementById("wonCompetition");
     const calculateButton = document.getElementById("calculateButton");
