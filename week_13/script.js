@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", function() {
         const thousands = Math.floor(xpGained / 1000);
         const hundredThousands = Math.floor(xpGained / 100000);
 
-        const karams = thousands + 100 * hundredThousands;
+        let karams = thousands + 100 * hundredThousands;
         if (wonCompetition) {
-            karams += 1000;
+            karams += 1000; // Add 1000 only if the checkbox is checked
         }
         const cBalls = 10 * karams;
 
@@ -24,11 +24,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // Clear results and input fields
     function clearResults() {
         resultsDiv.textContent = "";
-        xpInput.value = "";
-        wonCompetitionCheckbox.checked = false;
     }
 
-    // Clear results and input fields when input is changed
+    // Clear results when input is changed
     xpInput.addEventListener("input", clearResults);
     wonCompetitionCheckbox.addEventListener("change", clearResults);
 });
