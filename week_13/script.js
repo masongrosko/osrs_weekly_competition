@@ -9,6 +9,14 @@ document.addEventListener("DOMContentLoaded", function() {
         return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
 
+    // Format input value with commas while typing
+    xpInput.addEventListener("input", function() {
+        const currentValue = xpInput.value.replace(/,/g, ''); // Remove existing commas
+        const numericValue = currentValue.replace(/[^\d]/g, ''); // Remove non-numeric characters
+        const formattedValue = formatNumberWithCommas(numericValue);
+        xpInput.value = formattedValue;
+    });
+
     calculateButton.addEventListener("click", function() {
         const xpGained = parseInt(xpInput.value.replace(/,/g, '')); // Remove commas for calculation
         const wonCompetition = wonCompetitionCheckbox.checked;
