@@ -20,4 +20,15 @@ document.addEventListener("DOMContentLoaded", function() {
         const resultText = `You would receive ${karams} karambwans and ${cBalls} cannon balls!`;
         resultsDiv.textContent = resultText;
     });
+
+    // Clear results and input fields
+    function clearResults() {
+        resultsDiv.textContent = "";
+        xpInput.value = "";
+        wonCompetitionCheckbox.checked = false;
+    }
+
+    // Clear results and input fields when input is changed
+    xpInput.addEventListener("input", clearResults);
+    wonCompetitionCheckbox.addEventListener("change", clearResults);
 });
