@@ -1,5 +1,12 @@
 body {
     font-family: Arial, sans-serif;
+    background-image: url("./week_13_osrs_image.png");
+    background-position: center top;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 95vh;
+
 }
 
 .calculator {
@@ -9,6 +16,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .results {
