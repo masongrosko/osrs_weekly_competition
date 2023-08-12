@@ -4,8 +4,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const calculateButton = document.getElementById("calculateButton");
     const resultsDiv = document.getElementById("results");
 
+    // Format number with commas for thousands
+    function formatNumberWithCommas(number) {
+        return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
     calculateButton.addEventListener("click", function() {
-        const xpGained = parseInt(xpInput.value);
+        const xpGained = parseInt(xpInput.value.replace(/,/g, '')); // Remove commas for calculation
         const wonCompetition = wonCompetitionCheckbox.checked;
 
         const thousands = Math.floor(xpGained / 1000);
@@ -17,7 +22,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         const cBalls = 10 * karams;
 
-        const resultText = `You would receive ${karams} karambwans and ${cBalls} cannon balls!`;
+        const formattedXP = formatNumberWithCommas(xpGained);
+        const resultText = `For ${formattedXP} XP, you would receive ${formatNumberWithCommas(karams)} karambwans and ${formatNumberWithCommas(cBalls)} cannon balls!`;
         resultsDiv.textContent = resultText;
     });
 
