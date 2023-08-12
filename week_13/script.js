@@ -31,13 +31,15 @@ document.addEventListener("DOMContentLoaded", function() {
         const cBalls = 10 * karams;
 
         const formattedXP = formatNumberWithCommas(xpGained);
-        const resultText = `For ${formattedXP} XP, you would receive ${formatNumberWithCommas(karams)} karambwans and ${formatNumberWithCommas(cBalls)} cannon balls!`;
-        resultsDiv.textContent = resultText;
+        const karambwanImage = '<img src="https://oldschool.runescape.wiki/images/thumb/Cooked_karambwan_detail.png/1024px-Cooked_karambwan_detail.png?43b37" alt="Karambwan Image" style="height: 2em; vertical-align: middle;">';
+        const cannonballImage = '<img src="https://oldschool.runescape.wiki/images/thumb/Cannonball_detail.png/1024px-Cannonball_detail.png?cbad8" alt="Cannonball Image" style="height: 2em; vertical-align: middle;">';
+        const resultText = `<br>${karambwanImage} ${formatNumberWithCommas(karams)} karambwans<br>${cannonballImage} ${formatNumberWithCommas(cBalls)} cannon balls`;
+        resultsDiv.innerHTML = resultText;
     });
 
     // Clear results and input fields
     function clearResults() {
-        resultsDiv.textContent = "";
+        resultsDiv.innerHTML = "";
     }
 
     // Clear results when input is changed
