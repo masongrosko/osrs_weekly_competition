@@ -1,7 +1,6 @@
 const karambwanImage = '<img src="https://oldschool.runescape.wiki/images/thumb/Cooked_karambwan_detail.png/1024px-Cooked_karambwan_detail.png?43b37" alt="Karambwan Image" style="height: 2em; vertical-align: middle;">';
 const cannonballImage = '<img src="https://oldschool.runescape.wiki/images/thumb/Cannonball_detail.png/1024px-Cannonball_detail.png?cbad8" alt="Cannonball Image" style="height: 2em; vertical-align: middle;">';
 const competitionNumber = 28879;
-const corsProxyUrl = 'https://cors-anywhere.herokuapp.com/';
 
 document.addEventListener("DOMContentLoaded", function() {
     const xpInput = document.getElementById("xpInput");
