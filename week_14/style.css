@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-position: center top;
-    overflow: hidden;
+    overflow: auto;
     background-repeat: no-repeat;
     background-size: contain;
     height: 95vh;
