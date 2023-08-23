@@ -2,7 +2,7 @@
 const teleTabImage = "Teleport_to_house_%28tablet%29_detail.png";
 const dragonBoneImage = "Dragon_bones_detail.png";
 const sandImage = "Bucket_of_sand_detail.png";
-const dragonScaleImage = "Blue_dragon_scale_detail.png";
+const dragonScaleImage = "Zulrah%27s_scales_detail.png";
 
 const competitionNumbers = [29259, 29260, 29261, 29262, 29263];
 const maxKc = 400;
