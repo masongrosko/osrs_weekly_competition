@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Week 14: Secrets of the Treasure II -  Sea Slug</title>
+</head>
+<body>
+    <h1>Week 14: Secrets of the Treasure II -  Sea Slug</h1>
+    <div class="calculator">
+        <h2>Calculate rewards</h2>
+        <input type="text" id="kcInput" placeholder="Total KC" class="center-align">
+        <div id="sliderContainer">
+            <div class="slider-wrapper">
+                <label for="dragonBones">Dragon Bones:</label>
+                <input type="range" id="dragonBones" class="slider" min="0" max="100" value="25", step="0.01">
+                <span class="slider-value">25%</span>
+            </div>
+            <div class="slider-wrapper">
+                <label for="dragonScales">Dragon Scales:</label>
+                <input type="range" id="dragonScales" class="slider" min="0" max="100" value="25", step="0.01">
+                <span class="slider-value">25%</span>
+            </div>
+            <div class="slider-wrapper">
+                <label for="bucketsOfSand">Buckets of Sand:</label>
+                <input type="range" id="bucketsOfSand" class="slider" min="0" max="100" value="25", step="0.01">
+                <span class="slider-value">25%</span>
+            </div>
+            <div class="slider-wrapper">
+                <label for="teleTabs">Tele Tabs:</label>
+                <input type="range" id="teleTabs" class="slider" min="0" max="100" value="25", step="0.01">
+                <span class="slider-value">25%</span>
+            </div>
+        </div>
+        <button id="calculateButton">Calculate</button>
+        <div class="results" id="results">
+            <!-- Results will be displayed here -->
+        </div>
+        <p>**Max kc is 400</p>
+    </div>
+
+    <div class="participants-table" id="participantsTable">
+        <!-- Participant table will be populated here -->
+    </div>
+    <button id="reloadTableButton">Reload Table</button>
+    <script src="script.js" defer></script>
+</body>
+</html>
