@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    background-position: center top;
+    overflow: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 95vh;
+    background-color: #0d1117;
+}
+
+button {
+    padding: 1px 20px;
+    margin: 10px auto;
+    border: none;
+    background-color: #3498dbbd;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 12px;
+    display: block;
+}
+
+h1 {
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #e6edf3;
+}
+
+#sliderContainer {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.slider-wrapper {
+    margin-bottom: 15px;
+}
+
+.slider {
+    width: 100%;
+}
+
+.slider-value {
+    flex: 1;
+    text-align: right;
+}
+
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #e6edf3;
+}
+.slider-wrapper label {
+    flex: 1;
+    margin-right: 10px;
+}
+.slider-wrapper input {
+    flex: 3;
+}
+
+.calculator {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #21262d;
+    color: #e6edf3;
+}
+
+.results {
+    margin-top: 10px;
+}
+
+.table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background-color: #21262d;
+    color: #e6edf3;;
+}
+
+.table th, .table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: right;
+}
+
+.table th {
+    background-color:  #16191c;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.table img {
+    display: block;
+    margin: 0 auto;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.center-align {
+    text-align: center;
+}
